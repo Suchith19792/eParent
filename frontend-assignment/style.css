@@ -1,0 +1,166 @@
+body{
+  background: url(bg.jpg) no-repeat center fixed;
+  background-size: cover;
+  margin: 0;
+}
+
+.navbar-wrapper {
+  width: 100%;
+  height: 40px;
+  background: #38413D;
+  box-shadow: 0px 3px 10px grey;
+}
+
+.login-wrapper, .register-wrapper {
+  border-radius: 5px;
+  background: #145C9E;
+  text-align: center;
+  cursor: pointer;
+}
+
+.login-button, .register-button {
+  font-family: 'Quicksand', sans-serif;
+  text-decoration: none;
+  color: white;
+}
+
+.login-wrapper {
+  float: right;
+  margin-right: 2%;
+  margin-top: 5px;
+  padding-top: 5px;
+  height: 25px;
+  width: 100px;
+}
+
+.register-wrapper {
+  width: 40%;
+  height: 40px;
+  padding-top: 13px;
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+.content-wrapper {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.logo-wrapper {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.logo {
+  height:80px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 100px;
+}
+
+.description-wrapper {
+  width: 70%;
+  text-align: justify;
+  margin: 0 auto;
+  font-family: 'Quicksand', sans-serif;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.field-wrapper {
+  margin: 0 auto;
+  font-family: 'Quicksand', sans-serif;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.contained {
+  background: white;
+  border-radius: 10px;
+  padding: 40px;
+  height: 500px;
+  box-shadow: 0px 5px 10px grey;
+}
+
+hr {
+  margin-bottom: 40px;
+}
+
+.field-wrapper h1 {
+  margin: 0;
+}
+
+.upload, .fields, .question, .answer {
+  width: 49%;
+  margin-bottom: 20px;
+}
+
+.fields {
+  padding-left: 1%;
+}
+
+.question{
+  height: 22px;
+}
+
+.answer input {
+  width: 90%;
+}
+
+.photo-wrapper {
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.photo {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.center {
+  float:none;
+  margin: 0 auto;
+}
+
+.upload {
+  min-height: 400px;
+  position: relative;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.right-align {
+  text-align: left;
+}
+
+.short input {
+  width: 100%;
+}
+
+.panel {
+  height: 115px;
+  width: 40%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.ext-margin {
+  margin-right: 0;
+}
+
+.h-short {
+  height: 230px;
+}
