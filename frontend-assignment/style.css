@@ -117,6 +117,11 @@ hr {
   margin-bottom: 15px;
 }
 
+.smaller {
+  width: 40%;
+  margin-top: 15px;
+}
+
 .photo {
   max-width: 100%;
   max-height: 100%;
