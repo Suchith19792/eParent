@@ -1,0 +1,8 @@
+{
+    "_comment": "STUDENT Registration - POST",
+    "login": "(string) user name",
+    "password": "(string) password",
+    "first_name": "(string) a first name",
+    "second_name": "(string) a second name",
+    "pic": "(file) a profile picture"
+}

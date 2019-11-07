@@ -1,0 +1,5 @@
+{
+    "_comment": "STUDENT Login - POST",
+    "user_name": "(string) user name",
+    "pwd": "(string) password"
+}

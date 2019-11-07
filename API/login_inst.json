@@ -1,0 +1,5 @@
+{
+    "_comment": "INSTITUTION Login - POST",
+    "inst_name": "(string) institution name",
+    "pwd": "(string) password"
+}

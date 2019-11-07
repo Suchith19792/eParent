@@ -1,0 +1,7 @@
+{
+    "_comment": "INSTITUTION Registration - POST",
+    "login": "(string) institution name",
+    "password": "(string) password",
+    "inst_name": "(string) institution name",
+    "pic": "(file) a profile picture"
+}
