@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_inst_names" value="name:inst_key;datatype:int,name:inst_name;datatype:string" />
+</info>
