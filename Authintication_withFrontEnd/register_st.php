@@ -172,7 +172,7 @@ do {
     </tr>
   </table>
   <input type="hidden" name="MM_insert" value="form1" />
-</form>
+</form><strong><a href="login_inst.php">Institute Login </a></strong></div>
   </div>
   </form>
   </div>
