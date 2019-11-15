@@ -174,7 +174,7 @@ if (isset($_POST['user_name']))
         </table>
         
         
-        </form>
+        </form><strong><a href="login_inst.php">Institute Login </a></strong></div>
       </div>
     </div>
   </div>
