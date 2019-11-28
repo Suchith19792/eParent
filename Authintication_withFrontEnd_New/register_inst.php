@@ -27,10 +27,7 @@ class postInfo
 if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) 
 {
 	move_uploaded_file($_FILES['pic']['tmp_name'], "inst_pics/".$_POST['login'].".jpg");
-	
-	
-	
-	
+
 	$cObj = new postInfo();
 	$cObj->setPost($_POST['login'], $_POST['password'], $_POST['inst_name']);
 	
@@ -41,7 +38,6 @@ echo $log." -- ";
 echo $pp." -- ";
 echo $iName;
   $insertSQL = "INSERT INTO institutions (login, password, inst_name) VALUES ('$log', '$pp', '$iName')";
-
 
 	  echo "<script>alert('New Institute Inserted Successfully');</script>";
 
