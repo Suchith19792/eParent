@@ -35,18 +35,9 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1"))
 	$pp = $cObj->pp;
 	$iName = $cObj->iName;
 
-  $insertSQL = "INSERT INTO institutions (login, password, inst_name) VALUES ('$log', '$pp', '$iName')";
+ 	$insertSQL = "INSERT INTO institutions (login, password, inst_name) VALUES ('$log', '$pp', '$iName')";
 
-	  echo "<script>alert('New Institute Inserted Successfully');</script>";
-
-if ($inst->query($insertSQL) === TRUE) {
-    //echo "New record created successfully";
-} else {
-    //echo "Error: " . $insertSQL . "<br>" . $inst->error;
-}
-
-  //mysql_select_db($database_inst, $inst);
-  //$Result1 = mysql_query($insertSQL, $inst) or die(mysql_error());
+	echo "<script>alert('New Institute Inserted Successfully');</script>";
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
