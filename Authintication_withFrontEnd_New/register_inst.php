@@ -34,9 +34,7 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1"))
 	$log = $cObj->log;
 	$pp = $cObj->pp;
 	$iName = $cObj->iName;
-echo $log." -- ";
-echo $pp." -- ";
-echo $iName;
+
   $insertSQL = "INSERT INTO institutions (login, password, inst_name) VALUES ('$log', '$pp', '$iName')";
 
 	  echo "<script>alert('New Institute Inserted Successfully');</script>";
