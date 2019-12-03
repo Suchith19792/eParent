@@ -69,7 +69,7 @@ $totalRows_si_inst_info = mysqli_num_rows($si_inst_info);
 
 <div class="navbar-wrapper">
   <div class="login-wrapper">
-    <a href="home.html" class="login-button">
+    <a href="index.html" class="login-button">
       Home
     </a>
   </div>
