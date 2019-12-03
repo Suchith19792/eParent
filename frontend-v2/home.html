@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+  <title>eParent</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script>
+      $(document).ready(function(){
+        $("#login-link").click(function(){
+          $("#login-switch").prop("checked", true);
+          console.log("Done")
+        });
+        $("#register-link").click(function(){
+          $("#register-switch").prop("checked", true);
+        });
+      });
+      </script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="home.css">
+  <link rel="stylesheet" type="text/css" href="transform.css">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Quicksand&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+<body>
+
+<div class="navbar-wrapper">
+    <div id="menuToggle">
+      <input class="checkmark" type="checkbox" />
+      <div class="login-wrapper">
+        <div class="login-button">
+          Register
+        </div>
+      </div>
+
+      <div id="menu">
+        <div class="text-content">
+          <input id="login-switch" class="hidden-radio" type="radio">
+          <input id="register-switch" class="hidden-radio" type="radio">
+          <div id="global-form-wrapper">
+          <div id="registration-form-wrapper">
+                <h1>Registration form</h1>
+                <div class="registration-form">
+                    <input id="student-selector" name="form-register-type" class="type-selector" type="radio" checked="checked"><span id="register-student" class="registration-type">Student</span>
+                    <input id="institution-selector" name="form-register-type" class="type-selector other" type="radio"><span id="register-institution" class="registration-type">Institution</span>
+                <div id="combined-form-wrapper">
+                      <div class="form-wrapper" id="student-form">
+                        <table>
+                          <tr>
+                            <td class="field-name">Student field name</td>
+                            <td class="field-form"><input type="text"></td>
+                          </tr>
+                        </table>
+                        <div class="submit-button">Submit</div>
+                      </div>
+                      <div class="form-wrapper" id="institution-form">
+                        <table>
+                          <tr>
+                            <td class="field-name">Institution field name</td>
+                            <td class="field-form"><input type="text"></td>
+                          </tr>
+                        </table>
+                        <div class="submit-button">Submit</div>
+                      </div>
+                </div>
+                </div>
+                <div class="login-switch">Already a member? Click <span class="pseudo-link" id="login-link">here</span> to log in.</div>
+          </div>
+          <!--<div class="login-switch-wrapper">-->
+
+
+          <div id="login-form-wrapper">
+                <h1>Login form</h1>
+                <div class="registration-form">
+                    <input id="student-selector" name="form-login-type" class="type-selector" type="radio" checked="checked"><span id="register-student" class="registration-type">Student</span>
+                    <input id="institution-selector" name="form-login-type" class="type-selector other" type="radio"><span id="register-institution" class="registration-type">Institution</span>
+                <div id="combined-form-wrapper">
+                      <div class="form-wrapper" id="student-form">
+                        <table>
+                          <tr>
+                            <td class="field-name">Student field name</td>
+                            <td class="field-form"><input type="text"></td>
+                          </tr>
+                        </table>
+                        <div class="submit-button">Submit</div>
+                      </div>
+                      <div class="form-wrapper" id="institution-form">
+                        <table>
+                          <tr>
+                            <td class="field-name">Institution field name</td>
+                            <td class="field-form"><input type="text"></td>
+                          </tr>
+                        </table>
+                        <div class="submit-button">Submit</div>
+                      </div>
+                </div>
+                </div>
+                <div class="login-switch">Not a member yet? Click <span class="pseudo-link" id="register-link">here</span> to register.</div>
+          </div>
+        </div>
+
+        </div>
+      </div>
+    </div>
+
+</div>
+
+<!-- <div class="logo-wrapper">
+  <div class="logo">
+    eParent
+  </div>
+</div> -->
+<div class="content-wrapper">
+  <div class = "text-wrapper left">
+    <div class = "text-content">
+    <h1>eParent</h1>
+
+    dolor sit amet, consectetur adipiscing elit. Vestibulum bibendum imperdiet purus, vitae tempus orci. Vivamus metus sapien, aliquet in laoreet et, accumsan at enim.
+    In malesuada ipsum purus, semper vestibulum ipsum accumsan id. Sed maximus ex ut felis sollicitudin, a pulvinar felis ullamcorper. In consequat ultricies ornare.
+    Suspendisse venenatis, sem ut bibendum hendrerit, sapien felis eleifend odio, non tempor elit mauris id orci. Suspendisse in efficitur risus. Morbi enim mi, eleifend at
+    nibh eget, sagittis tristique ipsum. Aliquam tincidunt mauris a nunc lacinia gravida. Vivamus turpis ante, molestie vitae lorem nec, tristique varius ligula. Nulla faucibus,
+    dui at ornare hendrerit, odio diam commodo risus, ac sodales magna ex sed ipsum. Praesent diam ligula, pellentesque eu lectus eu, hendrerit finibus erat.
+    In placerat risus et eros tristique, et eleifend velit imperdiet. Aliquam vulputate venenatis sapien, non imperdiet felis hendrerit sit amet. Phasellus in accumsan tellus.
+    Mauris in pretium metus. Praesent et volutpat odio. Maecenas vehicula lacus ac nisi molestie, at consequat leo blandit. Quisque sed nibh consectetur dolor sollicitudin tempus.
+    Praesent fermentum ultrices odio, eget sagittis augue ornare nec. Sed tristique mi eget nunc sodales interdum. In hac habitasse platea dictumst. Interdum et malesuada fames
+    ac ante ipsum primis in faucibus. Etiam vel auctor velit.
+    dolor sit amet, consectetur adipiscing elit. Vestibulum bibendum imperdiet purus, vitae tempus orci. Vivamus metus sapien, aliquet in laoreet et, accumsan at enim.
+    In malesuada ipsum purus, semper vestibulum ipsum accumsan id. Sed maximus ex ut felis sollicitudin, a pulvinar felis ullamcorper. In consequat ultricies ornare.
+    Suspendisse venenatis, sem ut bibendum hendrerit, sapien felis eleifend odio, non tempor elit mauris id orci. Suspendisse in efficitur risus. Morbi enim mi, eleifend at
+    nibh eget, sagittis tristique ipsum. Aliquam tincidunt mauris a nunc lacinia gravida. Vivamus turpis ante, molestie vitae lorem nec, tristique varius ligula. Nulla faucibus,
+    dui at ornare hendrerit, odio diam commodo risus, ac sodales magna ex sed ipsum. Praesent diam ligula, pellentesque eu lectus eu, hendrerit finibus erat.
+    In placerat risus et eros tristique, et eleifend velit imperdiet. Aliquam vulputate venenatis sapien, non imperdiet felis hendrerit sit amet. Phasellus in accumsan tellus.
+    Mauris in pretium metus. Praesent et volutpat odio. Maecenas vehicula lacus ac nisi molestie, at consequat leo blandit. Quisque sed nibh consectetur dolor sollicitudin tempus.
+    Praesent fermentum ultrices odio, eget sagittis augue ornare nec. Sed tristique mi eget nunc sodales interdum. In hac habitasse platea dictumst. Interdum et malesuada fames
+    ac ante ipsum primis in faucibus. Etiam vel auctor velit.
+    </div>
+  </div>
+  <div class = "picture-wrapper right picture-1">
+  </div>
+  </div>
+
+  <div class="content-wrapper">
+    <div class = "text-wrapper right">
+      <div class = "text-content">
+      <h1>Lorem ipsum</h1>
+
+      dolor sit amet, consectetur adipiscing elit. Vestibulum bibendum imperdiet purus, vitae tempus orci. Vivamus metus sapien, aliquet in laoreet et, accumsan at enim.
+      In malesuada ipsum purus, semper vestibulum ipsum accumsan id. Sed maximus ex ut felis sollicitudin, a pulvinar felis ullamcorper. In consequat ultricies ornare.
+      Suspendisse venenatis, sem ut bibendum hendrerit, sapien felis eleifend odio, non tempor elit mauris id orci. Suspendisse in efficitur risus. Morbi enim mi, eleifend at
+      nibh eget, sagittis tristique ipsum. Aliquam tincidunt mauris a nunc lacinia gravida. Vivamus turpis ante, molestie vitae lorem nec, tristique varius ligula. Nulla faucibus,
+      dui at ornare hendrerit, odio diam commodo risus, ac sodales magna ex sed ipsum. Praesent diam ligula, pellentesque eu lectus eu, hendrerit finibus erat.
+      In placerat risus et eros tristique, et eleifend velit imperdiet. Aliquam vulputate venenatis sapien, non imperdiet felis hendrerit sit amet. Phasellus in accumsan tellus.
+      Mauris in pretium metus. Praesent et volutpat odio. Maecenas vehicula lacus ac nisi molestie, at consequat leo blandit. Quisque sed nibh consectetur dolor sollicitudin tempus.
+      Praesent fermentum ultrices odio, eget sagittis augue ornare nec. Sed tristique mi eget nunc sodales interdum. In hac habitasse platea dictumst. Interdum et malesuada fames
+      ac ante ipsum primis in faucibus. Etiam vel auctor velit.
+      dolor sit amet, consectetur adipiscing elit. Vestibulum bibendum imperdiet purus, vitae tempus orci. Vivamus metus sapien, aliquet in laoreet et, accumsan at enim.
+      In malesuada ipsum purus, semper vestibulum ipsum accumsan id. Sed maximus ex ut felis sollicitudin, a pulvinar felis ullamcorper. In consequat ultricies ornare.
+      Suspendisse venenatis, sem ut bibendum hendrerit, sapien felis eleifend odio, non tempor elit mauris id orci. Suspendisse in efficitur risus. Morbi enim mi, eleifend at
+      nibh eget, sagittis tristique ipsum. Aliquam tincidunt mauris a nunc lacinia gravida. Vivamus turpis ante, molestie vitae lorem nec, tristique varius ligula. Nulla faucibus,
+      dui at ornare hendrerit, odio diam commodo risus, ac sodales magna ex sed ipsum. Praesent diam ligula, pellentesque eu lectus eu, hendrerit finibus erat.
+      In placerat risus et eros tristique, et eleifend velit imperdiet. Aliquam vulputate venenatis sapien, non imperdiet felis hendrerit sit amet. Phasellus in accumsan tellus.
+      Mauris in pretium metus. Praesent et volutpat odio. Maecenas vehicula lacus ac nisi molestie, at consequat leo blandit. Quisque sed nibh consectetur dolor sollicitudin tempus.
+      Praesent fermentum ultrices odio, eget sagittis augue ornare nec. Sed tristique mi eget nunc sodales interdum. In hac habitasse platea dictumst. Interdum et malesuada fames
+      ac ante ipsum primis in faucibus. Etiam vel auctor velit.
+      </div>
+    </div>
+    <div class = "picture-wrapper left picture-2">
+    </div>
+    </div>
+
+  <footer>
+    <div class="footer-text-wrapper">
+      Made with <span id="heart"></span> by Marwa Almoussawy, Vitaly Naumov, Suchith Shetty and Istvan Sraj. <a href="contact.html">Contact us.</a>
+    </div>
+  </footer>
+
+</body>
+</html>
