@@ -76,9 +76,8 @@ echo $iName;
   $insertSQL = "INSERT INTO institutions (login, password, inst_name) VALUES ('$log', '$pp', '$iName')";
 
 
-	  echo "<script>alert('New Institute Inserted Successfully');
-	  window.location.href = "login_inst.php"</script>";
-            
+	  echo "<script>alert('New Institute Inserted Successfully');</script>";
+            ?><meta http-equiv = "refresh" content = "0; url = login_inst.php" /><?php
 		
 		
 if ($inst->query($insertSQL) === TRUE) {
