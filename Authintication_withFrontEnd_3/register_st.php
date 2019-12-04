@@ -75,8 +75,9 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1"))
   $insertSQL = "INSERT INTO students ( inst_key, login, password, first_name, second_name) VALUES ('$iKey', '$log', '$pp', '$fName', '$sName')";
 
  
-	  echo "<script>alert('New Student Inserted Successfully');</script>";
-   window.location.href = "login_inst.php"
+	  echo "<script>alert('New Student Inserted Successfully');
+	  window.location.href = "login_inst.php"</script>";
+   
 
 if ($inst->query($insertSQL) === TRUE) {
     echo "New record created successfully";
