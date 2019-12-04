@@ -77,7 +77,9 @@ echo $iName;
 
 
 	  echo "<script>alert('New Institute Inserted Successfully');</script>";
-
+            window.location.href = "login_inst.php"
+		
+		
 if ($inst->query($insertSQL) === TRUE) {
     //echo "New record created successfully";
 } else {
