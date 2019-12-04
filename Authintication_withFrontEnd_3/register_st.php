@@ -76,7 +76,8 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1"))
 
  
 	  echo "<script>alert('New Student Inserted Successfully');
-	  window.location.href = "login_st.php"</script>";
+	  </script>";
+	?><meta http-equiv = "refresh" content = "0; url = login_st.php" /><?php
    
 
 if ($inst->query($insertSQL) === TRUE) {
