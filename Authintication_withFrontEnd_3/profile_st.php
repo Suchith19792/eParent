@@ -146,10 +146,45 @@ Add a Grade
     
 
     <label id="first">Subject Name</label><br/>
-    <input type="password" name="password"><br/>
 
+    <select name="password">
+        <option value="grade1_maths" >grade1_maths</option>
+        <option value="grade2_maths" >grade2_maths</option>
+        <option value="grade3_maths" >grade3_maths</option>
+        <option value="grade4_maths" >grade4_maths</option>
+        <option value="grade5_maths" >grade5_maths</option>
+        <option value="grade6_maths" >grade6_maths</option>
+        <option value="grade7_maths" >grade7_maths</option>
+        <option value="grade8_maths" >grade8_maths</option>
+        <option value="grade9_maths" >grade9_maths</option>
+        <option value="grade10_maths" >grade10_maths</option>
+        
+        <option value="grade1_science" >grade1_science</option>
+        <option value="grade2_science" >grade2_science</option>
+        <option value="grade3_science" >grade3_science</option>
+        <option value="grade4_science" >grade4_science</option>
+        <option value="grade5_science" >grade5_science</option>
+        <option value="grade6_science" >grade6_science</option>
+        <option value="grade7_science" >grade7_science</option>
+        <option value="grade8_science" >grade8_science</option>
+        <option value="grade9_science" >grade9_science</option>
+        <option value="grade10_science" >grade10_science</option>
+        
+        <option value="grade1_language" >grade1_language</option>
+        <option value="grade2_language" >grade2_language</option>
+        <option value="grade3_language" >grade3_language</option>
+        <option value="grade4_language" >grade4_language</option>
+        <option value="grade5_language" >grade5_language</option>
+        <option value="grade6_language" >grade6_language</option>
+        <option value="grade7_language" >grade7_language</option>
+        <option value="grade8_language" >grade8_language</option>
+        <option value="grade9_language" >grade9_language</option>
+        <option value="grade10_language" >grade10_language</option>
+        
+      </select>
+<br>
     <label id="first">Grade</label><br/>
-    <input type="text" name="email"><br/>
+    <input type="number" name="email" max="100"><br/>
 
     <button type="submit" name="save">save</button>
     </form>
