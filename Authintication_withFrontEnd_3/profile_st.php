@@ -124,6 +124,36 @@ $totalRows_si_inst_info = mysqli_num_rows($si_inst_info);
       <div class="info-value">
         <?php echo $row_si_inst_info['inst_name']; ?>
       </div>
+      <div class="info-attribute">
+      <?php
+    
+    if(isset($_GET['password'])){
+        mysql_select_db($database_inst, $inst);
+
+        $s_id = $row_st['stud_key'];
+        $s_name = $_GET["password"];
+        $s_grade = $_GET["email"];
+
+    $query = "INSERT into st_data(stud_key, subject_name, gr_data) values('$s_id','$s_name','$s_grade')";
+    mysqli_query($inst, $query);
+
+    }
+
+    ?>
+     <p>&nbsp;</p>
+Add a Grade
+    <form method="get"> 
+    
+
+    <label id="first">Subject Name</label><br/>
+    <input type="password" name="password"><br/>
+
+    <label id="first">Grade</label><br/>
+    <input type="text" name="email"><br/>
+
+    <button type="submit" name="save">save</button>
+    </form>
+</div>
     </div>
 
 
