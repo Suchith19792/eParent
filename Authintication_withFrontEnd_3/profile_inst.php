@@ -8,10 +8,10 @@ if (!isset($_SESSION)) {
 
 
 $user_info = $_SESSION['MM_Username'];
- 
+
 
 if (!function_exists("GetSQLValueString")) {
-function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
+function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "")
 {
   if (PHP_VERSION < 6) {
     $theValue = get_magic_quotes_gpc() ? stripslashes($theValue) : $theValue;
@@ -22,7 +22,7 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
   switch ($theType) {
     case "text":
       $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
-      break;    
+      break;
     case "long":
     case "int":
       $theValue = ($theValue != "") ? intval($theValue) : "NULL";
@@ -43,7 +43,7 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 
 
 $colname_st = "-1";
-if (isset($_SESSION['MM_Username'])) 
+if (isset($_SESSION['MM_Username']))
 {
   $colname_st = $_SESSION['MM_Username'];
 }
@@ -55,7 +55,7 @@ $row_st = mysqli_fetch_assoc($st);
 $totalRows_st = mysqli_num_rows($st);
 
 $colname_num_of_st = "-1";
-if (isset($_SESSION['MM_Username'])) 
+if (isset($_SESSION['MM_Username']))
 {
   $colname_num_of_st = $_SESSION['MM_Username'];
 }
@@ -81,7 +81,7 @@ if(isset($_POST["submit"]))
    $handle = fopen($_FILES['file']['tmp_name'], "r");
    while($data = fgetcsv($handle))
    {
-    $item1 = mysqli_real_escape_string($inst, $data[0]);  
+    $item1 = mysqli_real_escape_string($inst, $data[0]);
     $item2 = mysqli_real_escape_string($inst, $data[1]);
 	$item3 = mysqli_real_escape_string($inst, $data[2]);
     $query = "INSERT into st_data(stud_key, subject_name, gr_data) values('$item1','$item2','$item3')";
@@ -105,7 +105,7 @@ if(isset($_POST["submit"]))
 </head>
   <title>eParent - Profile</title>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
 
   <link rel="stylesheet" type="text/css" href="style.css">
@@ -136,9 +136,9 @@ if(isset($_POST["submit"]))
     <hr>
     <div class="profile-summary left">
       <div class="photo-wrapper">
-      
+
       <img class="photo" src="inst_pics/<?php echo $user_info = $_SESSION['MM_Username']; ?>.jpg" alt="Empty profile picture">
-      
+
       </div>
       <div class="info-attribute">
         Institute Name
@@ -146,17 +146,17 @@ if(isset($_POST["submit"]))
       <div class="info-value">
         <?php echo $row_st['inst_name']; ?>
       </div>
-      
+
       <div class="info-attribute">
         Number of Students
       </div>
-      <div class="info-value">      
+      <div class="info-value">
          <?php echo $totalRows_num_of_st; ?>
       </div>
 
 <div class="info-attribute">
       <form method="post" enctype="multipart/form-data">
-   <div align="center">  
+   <div align="center">
     <label>Select Student Grades File:</label>
     <input type="file" name="file" />
     <br />
@@ -190,15 +190,15 @@ if(isset($_POST["submit"]))
           Details
         </a>
       </div>
-      
+
 
 
 <p>&nbsp;</p>
 
-     <table border="1" cellpadding="1" cellspacing="1">
+     <table class="institute_table" border="1" cellpadding="1" cellspacing="1">
    <tr>
-     <td><strong>first_name</strong></td>
-     <td><strong>second_name</strong></td>
+     <th><strong>first_name</strong></th>
+     <th><strong>second_name</strong></th>
    </tr>
    <?php do { ?>
      <tr>
@@ -211,14 +211,14 @@ if(isset($_POST["submit"]))
 
 
     </div>
-    
+
   </div>
 
 </div>
 
 
 
- 
+
 
 </body>
 </html>
