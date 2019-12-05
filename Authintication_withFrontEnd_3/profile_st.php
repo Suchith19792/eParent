@@ -6,7 +6,7 @@
 if (!isset($_SESSION)) {
   session_start();
 }
-
+$patch_img_1 = rand(1,10);
 $user_info = $_SESSION['MM_Username'];
 
 
@@ -136,12 +136,19 @@ $totalRows_si_inst_info = mysqli_num_rows($si_inst_info);
       <div class="prediction">
 
         <?php
-          $rand = rand(1,10);
+
+          if( file_exists( ' st_picsf/ '. $user_info = $_SESSION['MM_Username'] ) ){
+            exec_shell( 'python eParent_algo_v2.py' );
+
+            $patch_img_1 = "script_out/". $_SESSION['MM_Username'] .'_1.png';
+            $patch_img_2 = "script_out/". $_SESSION['MM_Username'] .'_2.png';
+            $patch_img_3 = "script_out/". $_SESSION['MM_Username'] .'_3.png';
+          }
         ?>
 
-        <img src="/script_out/<?php echo $rand?>_1.png" alt="Smiley face" height="300" width="500"><br><br>
-        <img src="/script_out/<?php echo $rand?>_2.png" alt="Smiley face" height="300" width="500"><br><br>
-        <img src="/script_out/<?php echo $rand?>_3.png" alt="Smiley face" height="300" width="500">
+        <img src="/script_out/<?php echo $patch_img_1?>_1.png" alt="Smiley face" height="300" width="500"><br><br>
+        <img src="/script_out/<?php echo $patch_img_1?>_2.png" alt="Smiley face" height="300" width="500"><br><br>
+        <img src="/script_out/<?php echo $patch_img_1?>_3.png" alt="Smiley face" height="300" width="500">
 
         
       </div>
