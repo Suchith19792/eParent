@@ -104,7 +104,7 @@ $totalRows_si_inst_info = mysqli_num_rows($si_inst_info);
 
 
   <div class="field-wrapper contained">
-    
+    <a href="pr_st.php?s=<?php echo $row_DetailRS1['stud_key'];?>">Profile</a> 
     <table border="0" align="center" cellpadding="5" cellspacing="5">
   <tr>
     <td class="answer"><strong>Student Key</strong></td>
