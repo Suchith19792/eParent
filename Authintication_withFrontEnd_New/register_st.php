@@ -75,13 +75,16 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1"))
   $insertSQL = "INSERT INTO students ( inst_key, login, password, first_name, second_name) VALUES ('$iKey', '$log', '$pp', '$fName', '$sName')";
 
  
-	  echo "<script>alert('New Student Inserted Successfully');</script>";
+	  echo "<script>alert('New Student Inserted Successfully');
+      </script>";
+
+      ?><meta http-equiv = "refresh" content = "0; url = login_st.php" /><?php
   
 
 if ($inst->query($insertSQL) === TRUE) {
-    echo "New record created successfully";
+    //echo "New record created successfully";
 } else {
-    echo "Error: " . $insertSQL . "<br>" . $inst->error;
+    //echo "Error: " . $insertSQL . "<br>" . $inst->error;
 }
 
   //mysqli_select_db($database_inst, $inst);
@@ -112,19 +115,38 @@ $totalRows_inst_names = mysqli_num_rows($inst_names);
   
 <body>
 
-<div class="navbar-wrapper">
-  <div class="login-wrapper">
-    <a href="index.html" class="login-button">
-      Home
-    </a>
-  </div>
-</div>
+<link href="ss2.css" rel="stylesheet" type="text/css">
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
-<div class="logo-wrapper">
-  <div class="logo">
-    eParent
-  </div>
-</div>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<nav class="menu">
+  <ol>
+    <li class="menu-item"><a href="index.html">Home</a></li>
+    <li class="menu-item"><a href="#0">About</a>
+    <ol class="sub-menu">
+        <li class="menu-item"><a href="about_team.html">Team Members</a></li>
+        <li class="menu-item"><a href="about_system.html">About the System</a></li>
+    </ol>
+    </li>
+    <li class="menu-item"><a href="#0">Register</a>
+      <ol class="sub-menu">
+        <li class="menu-item"><a href="register_inst.php">Institute Registration</a></li>
+        <li class="menu-item"><a href="register_st.php">Student Registration</a></li>
+      </ol>
+    </li>
+    <li class="menu-item"><a href="#0">Login</a>
+      <ol class="sub-menu">
+        <li class="menu-item"><a href="login_inst.php">Institute Login</a></li>
+        <li class="menu-item"><a href="login_st.php">Student Login</a></li>
+        </ol>
+    </li>
+  </ol>
+</nav>
 
 <div class="content-wrapper">
 

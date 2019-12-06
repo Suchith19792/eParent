@@ -3,6 +3,39 @@
 
 error_reporting(0);
 
+
+
+if (!function_exists("GetSQLValueString")) {
+function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
+{
+  if (PHP_VERSION < 6) {
+    $theValue = get_magic_quotes_gpc() ? stripslashes($theValue) : $theValue;
+  }
+
+  $theValue = function_exists("mysql_real_escape_string") ? mysql_real_escape_string($theValue) : mysql_escape_string($theValue);
+
+  switch ($theType) {
+    case "text":
+      $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
+      break;    
+    case "long":
+    case "int":
+      $theValue = ($theValue != "") ? intval($theValue) : "NULL";
+      break;
+    case "double":
+      $theValue = ($theValue != "") ? doubleval($theValue) : "NULL";
+      break;
+    case "date":
+      $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
+      break;
+    case "defined":
+      $theValue = ($theValue != "") ? $theDefinedValue : $theNotDefinedValue;
+      break;
+  }
+  return $theValue;
+}
+}
+
 $editFormAction = $_SERVER['PHP_SELF'];
 if (isset($_SERVER['QUERY_STRING'])) {
   $editFormAction .= "?" . htmlentities($_SERVER['QUERY_STRING']);
@@ -27,17 +60,33 @@ class postInfo
 if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) 
 {
 	move_uploaded_file($_FILES['pic']['tmp_name'], "inst_pics/".$_POST['login'].".jpg");
-
+	
+	
+	
+	
 	$cObj = new postInfo();
 	$cObj->setPost($_POST['login'], $_POST['password'], $_POST['inst_name']);
 	
 	$log = $cObj->log;
 	$pp = $cObj->pp;
 	$iName = $cObj->iName;
+echo $log." -- ";
+echo $pp." -- ";
+echo $iName;
+  $insertSQL = "INSERT INTO institutions (login, password, inst_name) VALUES ('$log', '$pp', '$iName')";
 
- 	$insertSQL = "INSERT INTO institutions (login, password, inst_name) VALUES ('$log', '$pp', '$iName')";
 
-	echo "<script>alert('New Institute Inserted Successfully');</script>";
+	  echo "<script>alert('New Institute Inserted Successfully');</script>";
+?><meta http-equiv = "refresh" content = "0; url = login_inst.php" /><?php
+
+if ($inst->query($insertSQL) === TRUE) {
+    //echo "New record created successfully";
+} else {
+    //echo "Error: " . $insertSQL . "<br>" . $inst->error;
+}
+
+  //mysql_select_db($database_inst, $inst);
+  //$Result1 = mysql_query($insertSQL, $inst) or die(mysql_error());
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -54,19 +103,38 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1"))
 </head>
   <body>
 
-<div class="navbar-wrapper">
-  <div class="login-wrapper">
-    <a href="index.html" class="login-button">
-      Home
-    </a>
-  </div>
-</div>
+<link href="ss2.css" rel="stylesheet" type="text/css">
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
-<div class="logo-wrapper">
-  <div class="logo">
-    eParent
-  </div>
-</div>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<nav class="menu">
+  <ol>
+    <li class="menu-item"><a href="index.html">Home</a></li>
+    <li class="menu-item"><a href="#0">About</a>
+    <ol class="sub-menu">
+        <li class="menu-item"><a href="about_team.html">Team Members</a></li>
+        <li class="menu-item"><a href="about_system.html">About the System</a></li>
+    </ol>
+    </li>
+    <li class="menu-item"><a href="#0">Register</a>
+      <ol class="sub-menu">
+        <li class="menu-item"><a href="register_inst.php">Institute Registration</a></li>
+        <li class="menu-item"><a href="register_st.php">Student Registration</a></li>
+      </ol>
+    </li>
+    <li class="menu-item"><a href="#0">Login</a>
+      <ol class="sub-menu">
+        <li class="menu-item"><a href="login_inst.php">Institute Login</a></li>
+        <li class="menu-item"><a href="login_st.php">Student Login</a></li>
+        </ol>
+    </li>
+  </ol>
+</nav>
 
 <div class="content-wrapper">
 
