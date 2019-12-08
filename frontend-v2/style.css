@@ -4,6 +4,193 @@ body{
   padding-top:5vh;
 }
 
+.infobar-wrapper {
+  height: 50vh;
+  background: #145C9E;
+  position: relative;
+}
+
+.infobar {
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+}
+
+.profile-picture {
+  position: absolute;
+  top: 5vh;
+  left: 20%;
+  width: 20%;
+  height: 40vh;
+  vertical-align: middle;
+  display: table-cell;
+  background: white;
+}
+
+.info-attribute{
+  font-weight: 700;
+}
+
+.info-wrapper {
+  margin-left: 50%;
+  margin-top: 5vh;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+}
+
+.info-wrapper h1{
+  margin-top: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 75px;
+}
+
+.info-wrapper table{
+  width: 100%;
+  margin-bottom: 2vh;
+}
+
+.submit-wrapper {
+  background-color: #38413D;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  width: 70px;
+  height: 3vh;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfile + label {
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    width: 130px;
+    padding-top: 0.5vh;
+    height: 2.5vh;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    margin: 4px 2px;
+    background-color: #38413D;
+    display: inline-block;
+}
+
+.student-table-wrapper {
+  background-color: #38413D;
+  height: 100%;
+  font-family: 'Quicksand', sans-serif;
+  color: black;
+}
+
+.about {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 10vh;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 3vh;
+  color: white;
+  font-weight: 700;
+}
+
+.about-picture {
+  height: 25vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.about td {
+  padding: 8px;
+}
+
+.image-wrapper {
+  width: 100%;
+  height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.extra-height {
+  height: fit-content!important;
+}
+
+.student-table-wrapper table{
+  margin: 0 auto;
+  width: 90%;
+  border: 2px solid black;
+}
+
+.student-table-wrapper th {
+  font-family: 'Josefin Sans', sans-serif;
+  color: white;
+  background: #145C9E;
+  padding: 10px 2px;
+  font-size: 3vh;
+}
+
+.student-table-wrapper td {
+  padding: 6px;
+}
+
+.student-table-wrapper tr:nth-child(even) {
+  background-color: #f3e8d2;
+}
+
+.student-table-wrapper tr:nth-child(odd) {
+  background-color: #fff4dd;
+}
+
+.info-wrapper select, input, button{
+    font-family: 'Quicksand', sans-serif;
+}
+
+.info-wrapper input {
+  padding-left: 5px;
+  width: 40px;
+}
+
+.info-wrapper h3, p{
+  margin: 0;
+}
+
+.info-wrapper table {
+  height: 15vh;
+}
+
+.info-details{
+  width: 70%;
+}
+
+.details-separator {
+  width: 100%;
+  height: 16vh;
+  background: #38413D;
+  text-align: center;
+  padding-top: 8vh;
+}
+
+.details-separator p {
+  font-family: 'Josefin Sans', sans-serif;
+  color: white;
+  font-size: 8vh;
+  height: 8vh;
+}
+
 .navbar-wrapper {
   position: fixed;
   z-index: 10;
@@ -271,10 +458,6 @@ hr {
   width: 72%;
 }
 
-.info-attribute{
-  font-weight: 700;
-  margin-top: 15px;
-}
 
 .prediction-wrapper {
   padding-left:2%;
